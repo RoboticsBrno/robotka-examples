@@ -53,10 +53,12 @@ void setup() {
     // Konec a uložení kódu na zpracování událostí
     builder.commit();
 
+    // Pošle text do sériového portu (zkuste zapnout "PlatformIO: Serial monitor"
+    // ve VS Code na dolní liště).
     fmt::print("{}'s Robotka '{}' started!\n", cfg.owner, cfg.name);
 
     for (int i = 0; true; ++i) {
-        // Send text to the android application
+        // Pošle text do terminálu v aplikaci RBController
         rkControllerSendLog(fmt::format("Tick #{}, battery at {}%, {}mv\n",
             i, rkBatteryPercent(), rkBatteryVoltageMv()));
         delay(1000);
