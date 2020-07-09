@@ -6,28 +6,23 @@ void setLedsByDistance(uint32_t distance) {
     // rozdeleno na useky po 100 mm (10 cm)
     if (distance < 100) {
         rkLedAll(false);
-        printf("0\n");
     } else if (distance < 200) {
         rkLedById(1, true);
         rkLedById(2, false);
         rkLedById(3, false);
         rkLedById(4, false);
-        printf("1\n");
     } else if (distance < 300) {
         rkLedById(1, true);
         rkLedById(2, true);
         rkLedById(3, false);
         rkLedById(4, false);
-        printf("2\n");
     } else if (distance < 400) {
         rkLedById(1, true);
         rkLedById(2, true);
         rkLedById(3, true);
         rkLedById(4, false);
-        printf("3\n");
     } else {
         rkLedAll(true);
-        printf("4\n");
     }
 }
 
