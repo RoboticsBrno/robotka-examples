@@ -1,5 +1,4 @@
 #include "robotka.h"
-#include <Arduino.h>
 
 void setup() {
     rkConfig cfg;

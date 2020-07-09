@@ -1,5 +1,3 @@
-#include <Arduino.h>
-
 #include "robotka.h"
 
 #define GRIDUI_LAYOUT_DEFINITION

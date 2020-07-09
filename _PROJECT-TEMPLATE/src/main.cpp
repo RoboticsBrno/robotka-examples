@@ -1,5 +1,4 @@
 #include "robotka.h"
-#include <Arduino.h>
 
 // Funkce setup se zavolá vždy po startu robota.
 void setup() {
