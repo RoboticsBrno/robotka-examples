@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "_PROJECT-TEMPLATE"
+		},
+		{
+			"path": "led+buttons"
+		},
+		{
+			"path": "motors"
+		},
+		{
+			"path": "rbcontroller-android-app"
+		}
+	],
+	"settings": {}
+}
