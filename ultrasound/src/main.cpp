@@ -36,7 +36,7 @@ void beepLikeCarSensor(uint32_t beepingPeriodMs) {
     } else {
         isActive = (!isActive || (beepingPeriodMs < 100)) && (beepingPeriodMs < 1000);
         rkBuzzerSet(isActive);
-        nextChangeMs += beepingPeriodMs/4;
+        nextChangeMs += beepingPeriodMs / 4;
     }
 }
 
@@ -63,5 +63,6 @@ void setup() {
         //beepByDistance(distance);
         beepLikeCarSensor(distance);
     }
-    while(true);
+    while (true)
+        ;
 }
