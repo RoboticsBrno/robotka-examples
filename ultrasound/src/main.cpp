@@ -35,15 +35,16 @@ void beepLikeCarSensor(uint32_t beepingPeriodMs) {
         return;
     } else {
         isActive = (!isActive || (beepingPeriodMs < 100)) && (beepingPeriodMs < 1000);
-        rkBuzzerSet(isActive);
-        nextChangeMs += beepingPeriodMs / 4;
+        rkBuzzerSet(isActive && rkButtonIsPressed(BTN_DOWN));
+        nextChangeMs += beepingPeriodMs/4;
     }
 }
 
 // Piskani bzucakem, pokud je namerena vzdalenost mensi nez 300 mm.
 void beepByDistance(uint32_t distance) {
     if (distance < 300)
-        rkBuzzerSet(true);
+        // Pipa pouze kdyz je stisknute tlacitko UP.
+        rkBuzzerSet(rkButtonIsPressed(BTN_DOWN));
     else
         rkBuzzerSet(false);
 }
@@ -55,7 +56,7 @@ void setup() {
     // cfg.motor_max_power_pct = 30; // limit výkonu motorů na 30%
     rkSetup(cfg);
 
-    while (!rkButtonIsPressed(BTN_DOWN)) {
+    while (true) {
         uint32_t distance = rkUltraMeasure(1);
         printf("%d\n", distance);
 
