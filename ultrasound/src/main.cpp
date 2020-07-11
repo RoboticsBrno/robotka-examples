@@ -64,6 +64,4 @@ void setup() {
         //beepByDistance(distance);
         beepLikeCarSensor(distance);
     }
-    while (true)
-        ;
 }
