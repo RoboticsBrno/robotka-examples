@@ -1,5 +1,5 @@
 #define RUN 5
-#define ADVANCED false
+#define ADVANCED -1
 
 #if (RUN == 1)
     #include "001_blink.hpp"
@@ -8,10 +8,12 @@
 #elif (RUN == 3)
     #include "003_train.hpp"
 #elif (RUN == 4)
-    #if ADVANCED
-        #include "004b_onoff_blink.hpp"
-    #else
+    #if (ADVANCED == 1)
+        #include "004c_onoff_blink.hpp"
+    #elif (ADVANCED == -1)
         #include "004a_onoff_blink.hpp"
+    #else
+        #include "004b_onoff_blink.hpp"
     #endif
 #elif (RUN == 5)
     #if ADVANCED

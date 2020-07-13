@@ -17,10 +17,12 @@ void setup() {
             delay(100);
             if (rkButtonUp(1)) {
                 blink = false;
+                delay(200);
             }
         }
         if (rkButtonUp(1)) {
             blink = true;
+            delay(200);
         }
     }
 }

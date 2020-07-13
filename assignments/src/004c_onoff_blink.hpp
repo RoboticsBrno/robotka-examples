@@ -10,19 +10,17 @@ void setup() {
     rkSetup(cfg);
 
     while (1) {
-        while(!rkButtonUp()){
-        }
-        delay(200);
-        while (!rkButtonUp()) {
+        while (blink) {
             rkLedBlue();
             delay(100);
             rkLedBlue(false);
             delay(100);
-            if (rkButtonUp()) {
+            if (rkButtonUp(1)) {
                 blink = false;
-                delay(200);
             }
         }
-        delay(200);
+        if (rkButtonUp(1)) {
+            blink = true;
+        }
     }
 }
