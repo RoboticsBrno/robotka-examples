@@ -5,7 +5,7 @@
 
 void setup() {
     rkConfig cfg;
-    cfg.owner = "Honza"; // Ujistěte se, že v aplikace RBController máte nastavené stejné
+    cfg.owner = "FrantaFlinta"; // Ujistěte se, že v aplikace RBController máte nastavené stejné
     cfg.name = "SuperRobotka";
 
     // Ve výchozím stavu lze WiFi na robotovi nastavit pomocí Android aplikace
